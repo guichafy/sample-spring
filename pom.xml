@@ -60,12 +60,18 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.testcontainers</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+                <dependency>
+                        <groupId>org.testcontainers</groupId>
+                        <artifactId>junit-jupiter</artifactId>
+                        <scope>test</scope>
+                </dependency>
+                <dependency>
+                        <groupId>org.wiremock.integrations.testcontainers</groupId>
+                        <artifactId>wiremock-testcontainers-module</artifactId>
+                        <version>1.0-alpha-15</version>
+                        <scope>test</scope>
+                </dependency>
+        </dependencies>
 
 	<build>
 		<plugins>
