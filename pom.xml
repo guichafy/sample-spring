@@ -26,9 +26,10 @@
 		<tag/>
 		<url/>
 	</scm>
-	<properties>
-		<java.version>21</java.version>
-	</properties>
+        <properties>
+                <java.version>21</java.version>
+                <java.net.preferIPv4Stack>true</java.net.preferIPv4Stack>
+        </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
