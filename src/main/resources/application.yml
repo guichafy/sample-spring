@@ -1,0 +1,41 @@
+# Configurações da aplicação Spring Boot
+spring:
+  application:
+    name: sample-api
+  
+  # Configurações de Virtual Threads (Spring Boot 3.2+)
+  threads:
+    virtual:
+      enabled: true
+
+# Configurações da API externa
+app:
+  external-api:
+    base-url: ${EXTERNAL_API_URL:https://api.example.com}
+    timeout:
+      connect: 10s
+      read: 30s
+
+# Configurações de logging
+logging:
+  level:
+    guichafy.sample_api: DEBUG
+    org.springframework.web.client: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Configurações do servidor
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# Configurações de management/actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
